@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <title>JavaScript Program</title>
+</head>
+<body>
+
+<h1>JavaScript Program Basics</h1>
+<div id="output"></div>
+
+<script>
+    // Task 1: For loop counting from 0 to 10 and checking odd or even
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML += "<h2>Odd or Even Check from 0 to 10:</h2>";
+    for (let i = 0; i <= 10; i++) {
+        if (i % 2 === 0) {
+            outputDiv.innerHTML += `Count ${i} is even<br>`;
+        } else {
+            outputDiv.innerHTML += `Count ${i} is odd<br>`;
+        }
+    }
+
+    // Task 2: Do While loop with user input
+    let myNum;
+    do {
+        myNum = prompt("Enter a number between 5 and 20:");
+        myNum = parseInt(myNum);
+    } while (isNaN(myNum) || myNum < 5 || myNum > 20);
+
+    outputDiv.innerHTML += "<h2>Counting up to your number:</h2>";
+    let counter = 1;
+    do {
+        outputDiv.innerHTML += `Counter: ${counter}<br>`;
+        counter++;
+    } while (counter <= myNum);
+
+    // Task 3: Store subjects in an array
+    const subjects = ['Accounting', 'Algebra', 'Programming', 'Art', 'Data Analytics'];
+
+    // Using forEach to display array values in a readable format
+    outputDiv.innerHTML += "<h2>Subjects List:</h2>";
+    subjects.forEach(subject => {
+        outputDiv.innerHTML += `${subject}<br>`;
+    });
+
+    // Displaying array values separated by commas using one statement
+    outputDiv.innerHTML += "<h2>Subjects List (Comma Separated):</h2>";
+    outputDiv.innerHTML += subjects.join(', ');
+
+</script>
+</body>
+</html>

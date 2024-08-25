@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <script>
+        // Task 1: Ask the user for their first name and store it in the variable Fname.
+        var Fname = prompt("Please enter your first name:");
+
+        // Task 2: Display a welcome message containing the name they entered.
+        alert("Hello " + Fname + ", welcome to the JavaScript Basics program!");
+
+        // Task 3: Create a constant piValue to store the value of Pi to 7 significant digits.
+        const piValue = 3.1415926;
+
+        // Task 4: Ask the user to input their favorite number and store it in a variable myFavNum.
+        var myFavNum = prompt("Please enter your favorite number:");
+
+        // Task 5: Calculate the area of a circle using the user's favorite number as the radius (r).
+        // Store the result in a new variable myArea.
+        var myArea = piValue * Math.pow(myFavNum, 2);
+
+        // Task 6: Display the contents of each variable with descriptions.
+        document.write("Hello " + Fname + ", you entered " + myFavNum + " as your favorite number. ");
+        document.write("If that was the radius of a circle, the circle's area would be " + myArea.toFixed(6) + ".");
+    </script>
+</body>
+</html>
